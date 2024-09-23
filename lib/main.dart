@@ -5,8 +5,12 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:signwave/controller.dart';
 import 'package:signwave/pages/ForgetPassword/confirm.dart';
 import 'package:signwave/pages/ForgetPassword/forget_pass.dart';
+import 'package:signwave/pages/battery_setting.dart';
+import 'package:signwave/pages/device_setting.dart';
 import 'package:signwave/pages/home.dart';
+import 'package:signwave/pages/load_setting.dart';
 import 'package:signwave/pages/login.dart';
+import 'package:signwave/pages/monitoring.dart';
 import 'package:signwave/pages/signup.dart';
 import 'package:signwave/theme/dark_mode.dart';
 import 'package:signwave/theme/light_mode.dart';
@@ -30,6 +34,10 @@ void main() async {
         '/confirm': (context) => const Confirm(),
         '/signup': (context) => const Signup(),
         '/forgetPass': (context) => const ForgetPass(),
+        '/monitoring': (context) => const Monitoring(),
+        '/batterySetting': (context) => const BatterySetting(),
+        '/deviceSetting': (context) => const DeviceSetting(),
+        '/loadSetting': (context) => const LoadSetting(),
       },
       theme: lightMode,
       darkTheme: darkMode,

@@ -27,6 +27,6 @@ TextStyle inputStyle(BuildContext context) {
 TextStyle buttonStyle(BuildContext context) {
   return TextStyle(
     fontSize: 18.sp,
-    color: Theme.of(context).colorScheme.onInverseSurface,
+    // color: Theme.of(context).colorScheme.onInverseSurface,
   );
 }
