@@ -38,14 +38,8 @@ class _ItemBoxState extends State<ItemBox> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    widget.icon,
-                    size: 50,
-                  ),
-                  Icon(
-                    widget.secondIcon,
-                    size: 50,
-                  )
+                  Icon(widget.icon, size: 50, color: Colors.white),
+                  Icon(widget.secondIcon, size: 50, color: Colors.white)
                 ],
               ),
               SizedBox(
@@ -56,7 +50,7 @@ class _ItemBoxState extends State<ItemBox> {
                   Flexible(
                     child: Text(
                       widget.text,
-                      style: headerStyle(context),
+                      style: boxTextStyle(context),
                     ),
                   ),
                 ],

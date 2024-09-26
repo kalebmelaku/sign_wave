@@ -8,12 +8,25 @@ TextStyle headerStyle(BuildContext context) {
     color: Theme.of(context).colorScheme.onSurface,
   );
 }
+TextStyle boxTextStyle(BuildContext context) {
+  return TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+}
 
 TextStyle minTextStyle(BuildContext context) {
   return TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.bold,
     color: Theme.of(context).colorScheme.onSurface,
+  );
+}
+TextStyle bodyText(BuildContext context) {
+  return TextStyle(
+    fontSize: 16.sp,
+    color: Colors.white,
   );
 }
 
@@ -27,6 +40,7 @@ TextStyle inputStyle(BuildContext context) {
 TextStyle buttonStyle(BuildContext context) {
   return TextStyle(
     fontSize: 18.sp,
+    color: Colors.white
     // color: Theme.of(context).colorScheme.onInverseSurface,
   );
 }

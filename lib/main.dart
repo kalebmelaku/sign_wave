@@ -11,6 +11,7 @@ import 'package:signwave/pages/home.dart';
 import 'package:signwave/pages/load_setting.dart';
 import 'package:signwave/pages/login.dart';
 import 'package:signwave/pages/monitoring.dart';
+import 'package:signwave/pages/setting.dart';
 import 'package:signwave/pages/signup.dart';
 import 'package:signwave/theme/dark_mode.dart';
 import 'package:signwave/theme/light_mode.dart';
@@ -38,9 +39,11 @@ void main() async {
         '/batterySetting': (context) => const BatterySetting(),
         '/deviceSetting': (context) => const DeviceSetting(),
         '/loadSetting': (context) => const LoadSetting(),
+        '/setting': (context) => const Setting(),
       },
       theme: lightMode,
       darkTheme: darkMode,
+      themeMode: ThemeMode.system, 
     ),
   ));
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);

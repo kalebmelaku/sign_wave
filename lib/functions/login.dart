@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:signwave/constants/url.dart';
-import 'package:signwave/controller.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:signwave/pages/home.dart';
 
 void login(email, pass, context, box1) async {
   if (email.text == "") {
@@ -28,7 +28,7 @@ void login(email, pass, context, box1) async {
     return;
   }
   Navigator.pushReplacement(
-      context, MaterialPageRoute(builder: (builder) => const Controller()));
+      context, MaterialPageRoute(builder: (builder) => const Home()));
   String uri = "${Url.url}/login";
   final Uri url = Uri.parse(uri);
 

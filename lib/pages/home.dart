@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:signwave/components/box.dart';
+import 'package:signwave/components/widgets/custom_bottom_navbar.dart';
 import 'package:signwave/components/widgets/drop_down.dart';
 import 'package:signwave/components/widgets/small_button_primary.dart';
 import 'package:signwave/components/widgets/small_button_secondary.dart';
@@ -16,6 +17,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   Box? box1;
+  final int _selectedIndex = 0;
   @override
   void initState() {
     // TODO: implement initState
@@ -79,15 +81,36 @@ class _HomeState extends State<Home> {
                     mainAxisSpacing: 25.0, // spacing between rows
                   ),
                   children: const [
-                    ItemBox(icon: Icons.access_time, text: "Real Time Monitoring", secondIcon: Icons.double_arrow_sharp, route: '/monitoring'),
-                    ItemBox(icon: Icons.battery_3_bar, text: "Battery Setting", secondIcon: Icons.double_arrow_sharp, route: '/batterySetting'),
-                    ItemBox(icon: Icons.settings, text: "Device Setting", secondIcon: Icons.double_arrow_sharp, route: '/deviceSetting'),
-                    ItemBox(icon: Icons.lightbulb_outline_sharp, text: "Load Setting", secondIcon: Icons.double_arrow_sharp, route: '/loadSetting'),
+                    ItemBox(
+                        icon: Icons.access_time,
+                        text: "Real Time Monitoring",
+                        secondIcon: Icons.double_arrow_sharp,
+                        route: '/monitoring'),
+                    ItemBox(
+                        icon: Icons.battery_3_bar,
+                        text: "Battery Setting",
+                        secondIcon: Icons.double_arrow_sharp,
+                        route: '/batterySetting'),
+                    ItemBox(
+                        icon: Icons.settings,
+                        text: "Device Setting",
+                        secondIcon: Icons.double_arrow_sharp,
+                        route: '/deviceSetting'),
+                    ItemBox(
+                        icon: Icons.lightbulb_outline_sharp,
+                        text: "Load Setting",
+                        secondIcon: Icons.double_arrow_sharp,
+                        route: '/loadSetting'),
                   ],
                 ),
               )
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: SafeArea(
+        child: CustomBottomNavigationBar(
+          selectedIndex: _selectedIndex,
         ),
       ),
     );

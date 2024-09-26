@@ -10,8 +10,14 @@ ThemeData lightMode = ThemeData(
     onInverseSurface: Colors.white,
     onSurface: const Color.fromARGB(255, 59, 59, 59),
   ),
-  textTheme: ThemeData.light().textTheme.apply(
-        bodyColor: Colors.grey[800],
-        displayColor: Colors.black,
+  textTheme: ThemeData.light().textTheme.copyWith(
+        bodyLarge: const TextStyle(color: Colors.black87), // Body text color
+        displayLarge:
+            const TextStyle(color: Colors.black87), // Display text color
+        titleLarge: const TextStyle(
+            color: Colors.black87), // Customize other headline styles
+        titleMedium:
+            const TextStyle(color: Colors.black87), // Customize subtitle styles
+        labelSmall: const TextStyle(color: Colors.black87),
       ),
 );
