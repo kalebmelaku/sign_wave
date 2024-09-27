@@ -106,7 +106,7 @@ class _MonitoringState extends State<Monitoring> {
             TertiaryButton(
               text: "Plot Energy Harvesting",
               onPressed: () {
-                print("object");
+                Navigator.pushNamed(context, '/plot_data');
               },
             )
           ],

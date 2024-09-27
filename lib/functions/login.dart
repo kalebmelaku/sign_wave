@@ -27,10 +27,10 @@ void login(email, pass, context, box1) async {
     return;
   }
   box1.put('WelPage_email', email.text);
-  box1.put('WelPage_email', pass.text);
-
+  box1.put('WelPage_pass', pass.text);
   Navigator.pushReplacement(
       context, MaterialPageRoute(builder: (builder) => const Home()));
+
   String uri = "${Url.url}/login";
   final Uri url = Uri.parse(uri);
   Map userData = {

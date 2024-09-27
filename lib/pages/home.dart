@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:logger/logger.dart';
 import 'package:signwave/components/box.dart';
 import 'package:signwave/components/widgets/custom_bottom_navbar.dart';
 import 'package:signwave/components/widgets/drop_down.dart';
@@ -18,6 +19,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   Box? box1;
   final int _selectedIndex = 0;
+  Logger logger = Logger();
   @override
   void initState() {
     // TODO: implement initState

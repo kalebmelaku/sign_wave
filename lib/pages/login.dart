@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:signwave/components/widgets/button.dart';
@@ -36,13 +35,13 @@ class _LoginState extends State<Login> {
   }
 
   void getData() async {
-    if (box1.get('email') != null) {
-      email.text = box1.get('email');
+    if (box1.get('WelPage_email') != null) {
+      email.text = box1.get('WelPage_email');
       isChecked = true;
       setState(() {});
     }
-    if (box1.get('pass') != null) {
-      pass.text = box1.get('pass');
+    if (box1.get('WelPage_pass') != null) {
+      pass.text = box1.get('WelPage_pass');
       isChecked = true;
       setState(() {});
     }

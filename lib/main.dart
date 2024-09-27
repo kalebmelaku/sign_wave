@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:signwave/components/panel_data/battery_data.dart';
+import 'package:signwave/components/panel_data/load_data.dart';
+import 'package:signwave/components/panel_data/plot_data.dart';
+import 'package:signwave/components/panel_data/solar_panel_data.dart';
 import 'package:signwave/controller.dart';
 import 'package:signwave/pages/ForgetPassword/confirm.dart';
 import 'package:signwave/pages/ForgetPassword/forget_pass.dart';
@@ -39,11 +43,15 @@ void main() async {
         '/batterySetting': (context) => const BatterySetting(),
         '/deviceSetting': (context) => const DeviceSetting(),
         '/loadSetting': (context) => const LoadSetting(),
+        '/solar_panel_data': (context) => const SolarPanelData(),
+        '/battery_data': (context) => const BatteryData(),
+        '/load_data': (context) => const LoadData(),
+        '/plot_data': (context) => const PlotData(),
         '/setting': (context) => const Setting(),
       },
       theme: lightMode,
       darkTheme: darkMode,
-      themeMode: ThemeMode.system, 
+      themeMode: ThemeMode.system,
     ),
   ));
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
