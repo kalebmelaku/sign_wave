@@ -3,6 +3,10 @@ import 'package:signwave/constants/colors.dart';
 
 ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,
+  appBarTheme: AppBarTheme(
+    backgroundColor: MyColors.primaryColor,
+    foregroundColor: Colors.white,
+  ),
   colorScheme: ColorScheme.dark(
     surface: Colors.grey.shade900,
     primary: MyColors.primaryColor,

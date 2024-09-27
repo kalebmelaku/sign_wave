@@ -28,6 +28,7 @@ void login(email, pass, context, box1) async {
   }
   box1.put('WelPage_email', email.text);
   box1.put('WelPage_pass', pass.text);
+  box1.put('isLogged', true);
   Navigator.pushReplacement(
       context, MaterialPageRoute(builder: (builder) => const Home()));
 

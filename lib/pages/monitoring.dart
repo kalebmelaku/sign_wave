@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:signwave/components/monitoring_box.dart';
 import 'package:signwave/components/widgets/custom_bottom_navbar.dart';
 import 'package:signwave/components/widgets/tertiary_button.dart';
-import 'package:signwave/constants/colors.dart';
 
 class Monitoring extends StatefulWidget {
   const Monitoring({super.key});
@@ -17,7 +16,6 @@ class _MonitoringState extends State<Monitoring> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColors.backgroundColor,
       appBar: AppBar(
         title: const Text("Real Time Data"),
       ),
@@ -29,11 +27,11 @@ class _MonitoringState extends State<Monitoring> {
           children: [
             Column(
               children: [
-                Row(
-                  children: [
                     SizedBox(
                       height: 15.h,
                     ),
+                Row(
+                  children: [
                     Text(
                       "Device Id: ",
                       style: Theme.of(context).textTheme.titleLarge,
@@ -63,7 +61,7 @@ class _MonitoringState extends State<Monitoring> {
                   ],
                 ),
                 SizedBox(
-                  height: 20.h,
+                  height: 15.h,
                 ),
                 const MonitoringBox(
                   icon: Icons.solar_power_outlined,

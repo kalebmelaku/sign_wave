@@ -6,7 +6,6 @@ import 'package:signwave/components/panel_data/battery_data.dart';
 import 'package:signwave/components/panel_data/load_data.dart';
 import 'package:signwave/components/panel_data/plot_data.dart';
 import 'package:signwave/components/panel_data/solar_panel_data.dart';
-import 'package:signwave/controller.dart';
 import 'package:signwave/pages/ForgetPassword/confirm.dart';
 import 'package:signwave/pages/ForgetPassword/forget_pass.dart';
 import 'package:signwave/pages/battery_setting.dart';
@@ -31,7 +30,7 @@ void main() async {
     child: MaterialApp(
       debugShowCheckedModeBanner: false,
       home: box1.get('isLogged', defaultValue: false)
-          ? const Controller()
+          ? const Home()
           : const Login(),
       routes: {
         '/home': (context) => const Home(),
@@ -63,10 +62,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(),
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }

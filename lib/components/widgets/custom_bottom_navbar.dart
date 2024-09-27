@@ -32,20 +32,35 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     }
 
     return SafeArea(
-      child: FloatingNavbar(
-        margin: EdgeInsets.only(bottom: 0.h),
-        fontSize: 15,
-        padding: EdgeInsets.symmetric(vertical: 2.h),
-        backgroundColor: MyColors.primaryColor,
-        selectedItemColor: MyColors.primaryColor,
-        onTap: (val) => onTabSelected(val),
-        currentIndex: widget.selectedIndex,
-        items: [
-          FloatingNavbarItem(icon: Icons.home, title: 'Home'),
-          FloatingNavbarItem(icon: Icons.waves, title: 'Signwave'),
-          FloatingNavbarItem(icon: Icons.settings, title: 'Settings'),
-          FloatingNavbarItem(icon: Icons.lightbulb, title: 'On/Off'),
-        ],
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 15.w, vertical: 12.h),
+        height: 59.h,
+        decoration:  BoxDecoration(
+          color: MyColors.primaryColor,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(.1),
+                blurRadius: 30,
+                offset: const Offset(0, 10),
+              ),
+            ],
+        ),
+        child: FloatingNavbar(
+          margin: EdgeInsets.only(bottom: 0.h),
+          fontSize: 15,
+          padding: EdgeInsets.symmetric(vertical: 2.h),
+          backgroundColor: MyColors.primaryColor,
+          selectedItemColor: MyColors.primaryColor,
+          onTap: (val) => onTabSelected(val),
+          currentIndex: widget.selectedIndex,
+          items: [
+            FloatingNavbarItem(icon: Icons.home, title: 'Home'),
+            FloatingNavbarItem(icon: Icons.waves, title: 'Signwave'),
+            FloatingNavbarItem(icon: Icons.settings, title: 'Settings'),
+            FloatingNavbarItem(icon: Icons.lightbulb, title: 'On/Off'),
+          ],
+        ),
       ),
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:signwave/constants/colors.dart';
 import 'package:signwave/constants/style.dart';
 
@@ -18,7 +17,9 @@ class _MonitoringBoxState extends State<MonitoringBox> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {},
+      onTap: () => {
+        Navigator.pushNamed(context, widget.route)
+      },
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
