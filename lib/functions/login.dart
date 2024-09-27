@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:signwave/constants/url.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -27,11 +26,13 @@ void login(email, pass, context, box1) async {
         fontSize: 16.0);
     return;
   }
+  box1.put('WelPage_email', email.text);
+  box1.put('WelPage_email', pass.text);
+
   Navigator.pushReplacement(
       context, MaterialPageRoute(builder: (builder) => const Home()));
   String uri = "${Url.url}/login";
   final Uri url = Uri.parse(uri);
-
   Map userData = {
     'email': email.text,
     'password': pass.text,
