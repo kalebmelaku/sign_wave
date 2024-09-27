@@ -44,3 +44,10 @@ TextStyle buttonStyle(BuildContext context) {
     // color: Theme.of(context).colorScheme.onInverseSurface,
   );
 }
+TextStyle tertiaryButtonStyle(BuildContext context) {
+  return TextStyle(
+    fontSize: 18.sp,
+    color: Colors.black
+    // color: Theme.of(context).colorScheme.onInverseSurface,
+  );
+}
